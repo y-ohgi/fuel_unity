@@ -25,7 +25,8 @@
         "fuel/parser": "dev-1.7/master",
         "fuelphp/upload": "2.0.2",
         "monolog/monolog": "1.5.*",
-        "michelf/php-markdown": "1.4.0"
+        "michelf/php-markdown": "1.4.0",
+        "ext-mbstring": "^0.0.0"
     },
     "suggest": {
         "dwoo/dwoo" : "Allow Dwoo templating with the Parser package",
@@ -36,10 +37,12 @@
         "mthaml/mthaml": "Allow Haml templating with Twig supports with the Parser package"
     },
     "config": {
+	"bin-dir": "vendor/bin",
         "vendor-dir": "fuel/vendor"
     },
     "extra": {
         "installer-paths": {
+
             "fuel/{$name}": ["fuel/core"],
             "{$name}": ["fuel/docs"]
         }
@@ -49,5 +52,8 @@
             "php oil r install"
         ]
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "^87.0"
+    }
 }
